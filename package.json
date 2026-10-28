@@ -1,0 +1,16 @@
+{
+  "name": "zerkalo-pyatigorsk-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "node scripts/build-site.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "2.118.0"
+  },
+  "devDependencies": {
+    "vite": "8.3.5"
+  }
+}
