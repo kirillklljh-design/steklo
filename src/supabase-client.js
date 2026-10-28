@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js';
 let client = null;
 
 function configuredEnvironment() {
-  const buildEnvironment = import.meta.env ?? {};
+  const buildEnvironment = { VITE_SUPABASE_URL: import.meta.env?.VITE_SUPABASE_URL, VITE_SUPABASE_PUBLISHABLE_KEY: import.meta.env?.VITE_SUPABASE_PUBLISHABLE_KEY };
   const runtimeEnvironment = globalThis.process?.env ?? {};
   return {
     url: buildEnvironment.VITE_SUPABASE_URL ?? runtimeEnvironment.VITE_SUPABASE_URL,
